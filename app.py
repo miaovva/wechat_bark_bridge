@@ -91,17 +91,17 @@ def push_message(token_manager):
     if token_manager.messages:
         token = token_manager.token
         for message in token_manager.messages:
-            msg, title, from_, url, icon = (
+            msg, title, group, url, icon = (
                 message["msg"],
                 message["title"],
-                message["from"],
+                message["group"],
                 message["url"],
                 message["icon"],
             )
             # 推送到服务器
             r = requests.get(
                 "https://api.day.app/{}/{}?title={}&group={}&url={}&icon={}&level=active".format(
-                    token, msg, title, from_, url, icon
+                    token, msg, title, group, url, icon
                 )
             )
             print(f"Message for {token_manager.token} pushed")
