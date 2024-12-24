@@ -146,7 +146,7 @@ def hello_world():
 def forward_notificatiobn():
     token = request.args.get("token", None)
     if not token:
-        return "参数错误", 400
+        return "参数错误1", 400
 
     token_manager = get_token_manager(token)
 
@@ -163,7 +163,7 @@ def forward_notificatiobn():
     )
 
     if not title or not msg:
-        return "参数错误", 400
+        return "参数错误2", 400
 
     token_manager.add_message(
         {
@@ -187,7 +187,7 @@ def forward_notificatiobn():
 def stop_push():
     token = request.args.get("token", None)
     if not token:
-        return "参数错误", 400
+        return "参数错误3", 400
 
     token_manager = get_token_manager(token)
 
@@ -203,7 +203,7 @@ def stop_push():
 def start_push():
     token = request.args.get("token", None)
     if not token:
-        return "参数错误", 400
+        return "参数错误4", 400
 
     token_manager = get_token_manager(token)
 
