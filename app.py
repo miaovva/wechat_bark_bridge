@@ -159,7 +159,7 @@ def forward_notificatiobn():
     group = request.args.get("group", "fchat")
     url = request.args.get("url", "fchat://")
     icon = request.args.get(
-        "icon", "https://s2.loli.net/2024/10/11/1hRNIbjcCSke5Zy.png"
+        "icon", "https://s2.loli.net/2024/12/25/yipXtdBebEOwYTk.png"
     )
 
     if not title or not msg:
